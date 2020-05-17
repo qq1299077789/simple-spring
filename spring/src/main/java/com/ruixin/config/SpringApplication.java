@@ -10,10 +10,17 @@ public class SpringApplication {
 
     private ApplicationContext applicationContext;
 
+    /**
+     * 获取Bean
+     * @param beanName
+     */
+    public Object getBean(String beanName){
+        return applicationContext.getBean(beanName);
+    }
 
     public static SpringApplication builder(Class<?> clz) throws SpringException {
         SpringApplication springApplication = new SpringApplication();
-        springApplication.applicationContext = ApplicationContext.builder(null);
+        springApplication.applicationContext = ApplicationContext.builder(clz);
         return springApplication;
     }
 

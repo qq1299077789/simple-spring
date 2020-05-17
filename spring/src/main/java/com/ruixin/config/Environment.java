@@ -45,6 +45,30 @@ public class Environment {
         this.properties.putAll(getenv);
     }
 
+    public List<String> getBeanPackage() {
+        return beanPackage;
+    }
+
+    public void setBeanPackage(List<String> beanPackage) {
+        this.beanPackage = beanPackage;
+    }
+
+    public Properties getProperties() {
+        return properties;
+    }
+
+    public void setProperties(Properties properties) {
+        this.properties = properties;
+    }
+
+    public String getConfigFile() {
+        return configFile;
+    }
+
+    public void setConfigFile(String configFile) {
+        this.configFile = configFile;
+    }
+
     public static Environment builder(String configFile) throws SpringException {
         Environment environment = new Environment();
         if(!StringUtil.isBlackOrNull(configFile)){

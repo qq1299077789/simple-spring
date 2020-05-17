@@ -7,9 +7,11 @@ package com.ruixin.exception;
 public interface IExceptionType {
 
     //bean错误处理
-    public static final int BEAN_ERROR = 1;
+     int BEAN_ERROR = 1;
 
     //配置错误
-    public static final int CONFIG_ERROR = 2;
+    int CONFIG_ERROR = 2;
 
+    //反射错误
+    int REFLECT_ERROR = 3;
 }

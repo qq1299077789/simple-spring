@@ -11,6 +11,8 @@ import java.lang.annotation.*;
 @Target({ElementType.TYPE})
 public @interface BeanScan {
 
+    //扫描的Bean包
     String[] beanPackage() default {};
 
+    String configFile() default "";
 }

@@ -13,4 +13,8 @@ public class StringUtil {
         }
         return object.equals("");
     }
+
+    public static String toString(Object object){
+        return object.toString();
+    }
 }
